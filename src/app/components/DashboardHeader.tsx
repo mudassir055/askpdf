@@ -1,3 +1,4 @@
+import Drawer from "./Drawer";
 const DashboardHeader = () => {
   return (
     <div>
@@ -89,7 +90,6 @@ const DashboardHeader = () => {
             </svg>{" "}
             My Documents
           </label>
-
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button">
               <svg
@@ -121,6 +121,7 @@ const DashboardHeader = () => {
           Ask me about Chapter 1 (1).pdf. <span>View Doc</span>
         </p>
       </div>
+      <Drawer />
     </div>
   );
 };
