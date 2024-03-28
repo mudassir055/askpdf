@@ -8,9 +8,14 @@ const PDFRenderer = () => {
 
   return (
     <>
-      <div className="flex flex-col h-full w-full ">
-        <div className="bg-white max-h-[70%] min-h-[77%] overflow-y-auto p-4">
-          PDF View
+      <div
+        //className={`hidden lg:flex lg:flex-col lg:h-full lg:w-full`}
+        className={`flex flex-col h-full absolute left-0 ${
+          isOpen ? "w-0 overflow-hidden" : "w-full"
+        } bg-slate-50 transition-all lg:static lg:w-full`}
+      >
+        <div className="bg-white flex-grow overflow-y-auto p-4">
+          <p>PDF View</p>
         </div>
         <footer className="flex justify-between items-start bg-white p-4 pb-7 min-h-16">
           <div className="flex justify-between items-center w-full">

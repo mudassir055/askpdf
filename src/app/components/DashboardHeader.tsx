@@ -1,7 +1,7 @@
 import Drawer from "./Drawer";
 const DashboardHeader = () => {
   return (
-    <div>
+    <div className="h-[14%]">
       <header className="flex justify-between w-full pb-2 pt-3 pl-8 pr-8">
         <div className="flex items-center justify-center gap-4">
           <button className="lg:hidden">
