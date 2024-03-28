@@ -8,13 +8,9 @@ const PDFRenderer = () => {
 
   return (
     <>
-      <div
-        className={`flex flex-col justify-between h-full absolute left-0 ${
-          isOpen ? "w-full" : "w-0 overflow-hidden"
-        } bg-gray-100 transition-all lg:static lg:w-full`}
-      >
-        <div className="flex-grow px-4 rounded">
-          <div className="bg-white p-2 h-full">pdf View</div>
+      <div className="flex flex-col h-full w-full ">
+        <div className="bg-white max-h-[70%] min-h-[77%] overflow-y-auto p-4">
+          PDF View
         </div>
         <footer className="flex justify-between items-start bg-white p-4 pb-7 min-h-16">
           <div className="flex justify-between items-center w-full">
@@ -91,7 +87,6 @@ const PDFRenderer = () => {
           </div>
         </footer>
       </div>
-
       <button
         className="absolute top-52 -ml-4 p-2 rounded bg-black h-32 lg:hidden"
         onClick={toggleRenderer}

@@ -7,7 +7,7 @@ import ChatRoom from "../components/ChatRoom";
 
 const Dashboard = () => {
   return (
-    <div className="flex w-full h-screen bg-white">
+    <div className="flex w-full max-h-screen overflow-hidden bg-white">
       <Sidebar />
       <div className="flex flex-col w-full min-h-full relative">
         <DashboardHeader />

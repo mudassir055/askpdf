@@ -3,8 +3,14 @@ import ResponseBubble from "./ResponseBubble";
 const ChatRoom = () => {
   return (
     <div className="flex flex-col h-full w-full ">
-      <div className="bg-gray-50 flex-grow p-4">
+      <div
+        className="bg-gray-50 max-h-[77%] min-h-[77&] overflow-y-auto p-4"
+        id="style-3"
+      >
         <ResponseBubble />
+        <MessageBubble />
+        <MessageBubble />
+        <MessageBubble />
         <MessageBubble />
       </div>
       <footer className="flex justify-between items-start bg-white pt-4 px-4 min-h-16">
