@@ -11,10 +11,12 @@ const PDFRenderer = () => {
       <div
         className={`flex flex-col justify-between h-full absolute left-0 ${
           isOpen ? "w-full" : "w-0 overflow-hidden"
-        } bg-white transition-all lg:static lg:w-full`}
+        } bg-gray-100 transition-all lg:static lg:w-full`}
       >
-        <div className="flex-grow">PdF View</div>
-        <footer className="flex justify-between items-start bg-white p-4 pb-6 min-h-16">
+        <div className="flex-grow px-4 rounded">
+          <div className="bg-white p-2 h-full">pdf View</div>
+        </div>
+        <footer className="flex justify-between items-start bg-white p-4 pb-7 min-h-16">
           <div className="flex justify-between items-center w-full">
             <div className="flex gap-2">
               <button className="flex items-center justify-center gap-2 rounded-lg border-gray-300 border-2 py-2 px-4">

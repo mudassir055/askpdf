@@ -56,17 +56,32 @@ const DashboardHeader = () => {
         </div>
         <div className="flex items-center justify-center gap-4">
           <div>
-            <div className="hidden lg:flex lg:justify-center items-center gap-2 p-2 pl-4 pr-4 bg-black text-white rounded-2xl border-black border-2">
-              <span className="font-semibold">EN </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#ffffff"
-                viewBox="0 0 256 256"
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} role="button">
+                <div className="hidden lg:flex lg:justify-center items-center gap-2 p-2 pl-4 pr-4 bg-black text-white rounded-2xl border-black border-2">
+                  <span className="font-semibold">EN </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="#ffffff"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M208.49,152.49l-72,72a12,12,0,0,1-17,0l-72-72a12,12,0,0,1,17-17L116,187V40a12,12,0,0,1,24,0V187l51.51-51.52a12,12,0,0,1,17,17Z"></path>
+                  </svg>
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-1 shadow bg-white w-52 mt-4"
               >
-                <path d="M208.49,152.49l-72,72a12,12,0,0,1-17,0l-72-72a12,12,0,0,1,17-17L116,187V40a12,12,0,0,1,24,0V187l51.51-51.52a12,12,0,0,1,17,17Z"></path>
-              </svg>
+                <li>
+                  <a>Item 1</a>
+                </li>
+                <li>
+                  <a>Item 2</a>
+                </li>
+              </ul>
             </div>
           </div>
 
