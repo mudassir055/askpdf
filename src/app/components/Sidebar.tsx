@@ -1,6 +1,6 @@
 const Sidebar = () => {
   return (
-    <div className="hidden lg:min-h-full lg:bg-black lg:w-20 lg:flex lg:flex-col lg:justify-between lg:items-center lg:p-4">
+    <div className="hidden lg:min-h-full lg:bg-black lg:w-20 lg:flex lg:flex-col lg:justify-between lg:items-center lg:p-4 lg:z-10">
       <div className="flex flex-col items-center gap-4">
         <a href="/">
           <svg

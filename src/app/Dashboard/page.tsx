@@ -11,7 +11,7 @@ const Dashboard = () => {
       <Sidebar />
       <div className="flex flex-col w-full min-h-full relative">
         <DashboardHeader />
-        <div className="flex-grow grid grid-cols-1 grid-rows-1 lg:grid-cols-2 w-full">
+        <div className="flex-grow grid grid-cols-1 grid-rows-1 lg:grid-cols-2 w-full relative">
           <PDFRenderer />
           <ChatRoom />
         </div>

@@ -72,7 +72,7 @@ const DashboardHeader = () => {
 
           <label
             htmlFor="my-drawer-4"
-            className="hidden lg:flex items-center justify-center gap-2 rounded-lg border-gray-300 border-2 p-2 pl-4 pr-4"
+            className="hidden lg:flex items-center justify-center gap-2 rounded-lg border-gray-300 border-2 py-2 px-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
