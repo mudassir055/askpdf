@@ -1,17 +1,26 @@
 import MessageBubble from "./MessageBubble";
 import ResponseBubble from "./ResponseBubble";
+
+// ChatRoom component renders the chat interface
 const ChatRoom = () => {
   return (
     <div className="flex flex-col h-full w-full">
+      {/* Chat messages container */}
       <div className="bg-gray-50 overflow-y-auto p-4" id="style-3">
+        {/* Response bubbles for incoming messages */}
         <ResponseBubble />
+
+        {/* Outgoing message bubbles */}
         <MessageBubble />
         <MessageBubble />
         <MessageBubble />
         <MessageBubble />
       </div>
+
+      {/* Chat input and action buttons */}
       <footer className="flex justify-between items-start bg-white pt-4 px-4">
         <div className="flex items-start justify-between flex-grow gap-4">
+          {/* Button to clear chat history */}
           <button className="bg-yellow-400 rounded-full p-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +38,10 @@ const ChatRoom = () => {
               </defs>
             </svg>
           </button>
+
+          {/* Form for user input */}
           <form className="flex items-start justify-between flex-grow gap-4">
+            {/* Text input for user message */}
             <span
               data-count="0 / 2000"
               className=" flex-grow flex flex-col items-end"
@@ -38,10 +50,14 @@ const ChatRoom = () => {
                 placeholder="Ask any question about your document"
                 className=" bg-white border-2 rounded-full px-8 pt-2 h-12 w-full"
               ></textarea>
+
+              {/* Character count */}
               <span>
                 <span className="text-sm">0 / 2000</span>
               </span>
             </span>
+
+            {/* Button to submit message */}
             <button type="submit" className="bg-black rounded-full p-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,6 +71,8 @@ const ChatRoom = () => {
             </button>
           </form>
         </div>
+
+        {/* Button to toggle chat settings */}
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,25 +1,36 @@
 "use client";
 import { useState } from "react";
+
+// PDFRenderer component renders PDF view with toggler
 const PDFRenderer = () => {
+  // State to manage visibility of PDF view
   const [isOpen, setIsOpen] = useState(false);
+
+  // Function to toggle PDF view visibility
   const toggleRenderer = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <>
+      {/* PDF view container */}
       <div
         //className={`hidden lg:flex lg:flex-col lg:h-full lg:w-full`}
         className={`flex flex-col h-full absolute left-0 ${
           isOpen ? "w-0 overflow-hidden" : "w-full"
         } bg-slate-50 transition-all lg:static lg:w-full`}
       >
+        {/* PDF content */}
         <div className="bg-white flex-grow overflow-y-auto p-4">
           <p>PDF View</p>
         </div>
+
+        {/* Footer with PDF controls */}
         <footer className="flex justify-between items-start bg-white p-4 pb-7 min-h-16">
           <div className="flex justify-between items-center w-full">
+            {/* PDF control buttons */}
             <div className="flex gap-2">
+              {/* Button for explaining images */}
               <button className="flex items-center justify-center gap-2 rounded-lg border-gray-300 border-2 py-2 px-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +48,7 @@ const PDFRenderer = () => {
                 </svg>
                 <p>Explain Images</p>
               </button>
+              {/* Other PDF control buttons */}
               <button>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,12 +98,14 @@ const PDFRenderer = () => {
                 </svg>
               </button>
             </div>
+            {/* Display current page number */}
             <div className="font-semibold text-black">
               <p>Page 4 of 16</p>
             </div>
           </div>
         </footer>
       </div>
+      {/* Button to toggle PDF view visibility on small screens */}
       <button
         className="absolute top-52 -ml-4 p-2 rounded bg-black h-32 lg:hidden"
         onClick={toggleRenderer}

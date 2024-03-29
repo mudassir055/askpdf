@@ -3,18 +3,26 @@ import React from "react";
 const MessageBubble = () => {
   return (
     <div className="flex justify-end">
+      {/* Container for message bubble */}
       <div className="flex gap-4 p-2 w-9/12 flex-row-reverse">
+        {/* Circle for user avatar */}
         <div className="min-w-8 h-8 bg-black rounded-full"></div>
+        {/* Container for message content */}
         <div className="flex flex-col">
+          {/* Bubble for message content */}
           <div className="p-4 bg-white rounded-2xl">
+            {/* Text content of the message */}
             <p className="text-sm text-black">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
+          {/* Footer for the message */}
           <div className="p-2">
+            {/* Footer text */}
             <p className="text-sm text-black text-right">Message Footer</p>
           </div>
         </div>
+        {/* Container for icon */}
         <div className="Icon-wrrap flex items-center justify-center mb-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"

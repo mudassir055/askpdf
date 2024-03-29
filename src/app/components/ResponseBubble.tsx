@@ -3,10 +3,15 @@ import React from "react";
 const ResponseBubble = () => {
   return (
     <div className="flex justify-start">
+      {/* Container for response bubble */}
       <div className="flex gap-4 p-2 w-9/12">
+        {/* Circle for user avatar */}
         <div className="min-w-8 h-8 bg-black rounded-full"></div>
+        {/* Container for response content */}
         <div className="flex flex-col">
+          {/* Bubble for response content */}
           <div className="p-4 bg-white rounded-2xl">
+            {/* Text content of the response */}
             <p className="text-sm text-black">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Accusamus deserunt laborum quidem dolores, quasi, repellat quae
@@ -14,10 +19,13 @@ const ResponseBubble = () => {
               praesentium et obcaecati ut amet. Est, beatae!
             </p>
           </div>
+          {/* Footer for the response */}
           <div className="p-2">
+            {/* Footer text */}
             <p className="text-sm text-black">Message Footer</p>
           </div>
         </div>
+        {/* Container for icon */}
         <div className="Icon-wrrap flex items-center justify-center mb-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"

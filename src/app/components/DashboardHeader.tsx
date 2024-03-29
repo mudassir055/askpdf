@@ -1,9 +1,14 @@
 import Drawer from "./Drawer";
+
+// DashboardHeader component
 const DashboardHeader = () => {
   return (
     <div className="h-[14%]">
+      {/* Header section */}
       <header className="flex justify-between w-full pb-2 pt-3 pl-8 pr-8">
+        {/* Left section of the header */}
         <div className="flex items-center justify-center gap-4">
+          {/* Button for toggling drawer on small screens */}
           <button className="lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -15,6 +20,8 @@ const DashboardHeader = () => {
               <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
             </svg>
           </button>
+
+          {/* Logo */}
           <div className="flex items-center gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,9 +61,13 @@ const DashboardHeader = () => {
             </div>
           </div>
         </div>
+
+        {/* Right section of the header */}
         <div className="flex items-center justify-center gap-4">
+          {/* Language dropdown */}
           <div>
             <div className="dropdown dropdown-end">
+              {/* Language dropdown button */}
               <div tabIndex={0} role="button">
                 <div className="hidden lg:flex lg:justify-center items-center gap-2 p-2 pl-4 pr-4 bg-black text-white rounded-2xl border-black border-2">
                   <span className="font-semibold">EN </span>
@@ -71,9 +82,10 @@ const DashboardHeader = () => {
                   </svg>
                 </div>
               </div>
+              {/* Language dropdown options */}
               <ul
                 tabIndex={0}
-                className="dropdown-content z-[1] menu p-1 shadow bg-white w-52 mt-4"
+                className="dropdown-content z-[1] menu p-1 shadow bg-white w-52 mt-4 rounded-lg"
               >
                 <li>
                   <a>Item 1</a>
@@ -85,6 +97,7 @@ const DashboardHeader = () => {
             </div>
           </div>
 
+          {/* Button to toggle drawer on large screens */}
           <label
             htmlFor="my-drawer-4"
             className="hidden lg:flex items-center justify-center gap-2 rounded-lg border-gray-300 border-2 py-2 px-4"
@@ -105,7 +118,10 @@ const DashboardHeader = () => {
             </svg>{" "}
             My Documents
           </label>
+
+          {/* Right Menu dropdown */}
           <div className="dropdown dropdown-end">
+            {/* Dropdown Button */}
             <div tabIndex={0} role="button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,6 +133,8 @@ const DashboardHeader = () => {
                 <path d="M128,96a32,32,0,1,0,32,32A32,32,0,0,0,128,96Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,128,144Zm0-64A32,32,0,1,0,96,48,32,32,0,0,0,128,80Zm0-48a16,16,0,1,1-16,16A16,16,0,0,1,128,32Zm0,144a32,32,0,1,0,32,32A32,32,0,0,0,128,176Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,128,224Z"></path>
               </svg>
             </div>
+
+            {/* Dropdown options */}
             <ul
               tabIndex={0}
               className="dropdown-content z-[1] menu p-1 shadow bg-white w-52 mt-4"
@@ -131,11 +149,14 @@ const DashboardHeader = () => {
           </div>
         </div>
       </header>
+
+      {/* Subheader PDF Name */}
       <div className="bg-gray-100 flex p-2 justify-center items-center">
         <p className="text-xs text-black font-normal">
           Ask me about Chapter 1 (1).pdf. <span>View Doc</span>
         </p>
       </div>
+      {/* Drawer component */}
       <Drawer />
     </div>
   );

@@ -3,14 +3,21 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Sidebar = () => {
+  // State to track whether the drawer is open or closed
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  // Function to toggle the state of the drawer
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
   return (
     <div className="hidden lg:flex">
+      {/* Hidden sidebar on small screens */}
+
+      {/* Main sidebar container */}
       <div className="lg:min-h-full lg:bg-black lg:w-20 lg:flex lg:flex-col lg:justify-between lg:items-center lg:p-4 lg:z-10">
         <div className="flex flex-col items-center gap-2">
+          {/* Logo */}
+          {/* Link to home page */}
           <Link href={"/"}>
             <div>
               <svg
@@ -34,7 +41,9 @@ const Sidebar = () => {
               </svg>
             </div>
           </Link>
+          {/* Sidebar navigation */}
           <ul className="p-4 bg-black text-white flex flex-col justify-start items-center gap-3">
+            {/* Each navigation item */}
             <li>
               <Link href={"/Dashboard"}>
                 <button
@@ -157,7 +166,10 @@ const Sidebar = () => {
             </li>
           </ul>
         </div>
+
+        {/* Secondary sidebar navigation */}
         <ul className="p-4 bg-black text-white flex flex-col justify-start items-center gap-3 pb-0">
+          {/* Each navigation item */}
           <li>
             <Link href={"/dashboard"}>
               <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
@@ -272,22 +284,31 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
+
+      {/* Drawer component */}
       <div
         className={`Drawer ${
           isDrawerOpen ? "w-96" : "w-0 overflow-hidden"
         } bg-gray-50 transition-all`}
       >
+        {/* Drawer header */}
         <header className="flex justify-between items-center p-4 w-full">
+          {/* Logo and upgrade button */}
           <div className="flex w-[50%] gap-2">
+            {/* Logo */}
             <h1 className=" text-black font-semibold">ASKYOURPDF</h1>
+            {/* Upgrade badge */}
             <div className="flex items-center bg-green-100 text-green-600 rounded-full px-2 text-[12px]">
               Free
             </div>
           </div>
+          {/* Upgrade button and close button */}
           <div className="flex items-center justify-between gap-2 w-[50%]">
+            {/* Upgrade button */}
             <button className="bg-black text-yellow-500 rounded-lg px-6 py-2">
               Upgrade
             </button>
+            {/* Close button */}
             <button
               className="flex items-center justify-center p-2 hover:bg-gray-200 text-black rounded-lg transition-all"
               onClick={toggleDrawer}
@@ -304,10 +325,13 @@ const Sidebar = () => {
             </button>
           </div>
         </header>
+        {/* Upgrade Message */}
         <div className="flex items-center justify-center p-3 bg-orange-100 text-sm text-black">
           <div>Upgrade to access more features</div>
         </div>
+        {/* Drawer content */}
         <div className="flex flex-col items-center justify-center p-5 px-6 gap-4">
+          {/* Drawer Search for conversations */}
           <div className="flex items-center justify-between px-4 py-2 w-full border-2 rounded-lg">
             <input
               className="bg-transparent text-sm"
@@ -327,9 +351,11 @@ const Sidebar = () => {
               </svg>
             </span>
           </div>
+          {/* Button for new Conversation */}
           <button className="flex items-center justify-center py-3 bg-black text-white rounded-lg w-full">
             +New Conversation
           </button>
+          {/* Drawer Conversations list */}
           <div className="flex flex-col gap-4">
             <p className="text-[12px] text-black font-semibold">YESTERDAY</p>
             <div className="flex gap-2 bg-gray-200 p-4 rounded-lg">
@@ -345,7 +371,9 @@ const Sidebar = () => {
                 </svg>
               </div>
               <div>
+                {/* Conversation title  */}
                 <h2 className="text-black font-semibold">Chapter 1 (1)</h2>
+                {/* Conversation text */}
                 <p className="text-[12px]">
                   Dr. F.Z. Khan teaches a course on Computer ...
                 </p>
