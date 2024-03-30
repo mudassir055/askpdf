@@ -1,8 +1,12 @@
+"use client";
 import Link from "next/link";
 import Drawer from "./Drawer";
 
 // DashboardHeader component
 const DashboardHeader = () => {
+  const handleGoBack = () => {
+    window.history.back();
+  };
   return (
     <div className="flex flex-col h-[14%]">
       {/* Header section */}
@@ -10,7 +14,7 @@ const DashboardHeader = () => {
         {/* Left section of the header */}
         <div className="flex items-center justify-center gap-4">
           {/* Button for toggling drawer on small screens */}
-          <button className="lg:hidden">
+          <button className="lg:hidden" onClick={() => handleGoBack()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -54,7 +58,7 @@ const DashboardHeader = () => {
                 r="5.092"
                 fill="#008C25"
                 stroke="#fff"
-                stroke-width="1.132"
+                strokeWidth="1.132"
               ></circle>
             </svg>
             <div>
@@ -160,12 +164,12 @@ const DashboardHeader = () => {
             >
               <path
                 stroke="#344054"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.667"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.667"
                 d="M12.5 2.5v15m-6-15h7c1.4 0 2.1 0 2.635.272a2.5 2.5 0 0 1 1.092 1.093C17.5 4.4 17.5 5.1 17.5 6.5v7c0 1.4 0 2.1-.273 2.635a2.5 2.5 0 0 1-1.092 1.092c-.535.273-1.235.273-2.635.273h-7c-1.4 0-2.1 0-2.635-.273a2.5 2.5 0 0 1-1.093-1.092C2.5 15.6 2.5 14.9 2.5 13.5v-7c0-1.4 0-2.1.272-2.635a2.5 2.5 0 0 1 1.093-1.093C4.4 2.5 5.1 2.5 6.5 2.5Z"
               ></path>
-            </svg>{" "}
+            </svg>
             My Documents
           </label>
 

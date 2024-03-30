@@ -56,7 +56,7 @@ const ChatRoom = () => {
             >
               <textarea
                 placeholder="Ask any question about your document"
-                className=" bg-white border-2 rounded-full px-8 pt-2 h-12 w-full"
+                className=" bg-white border-2 rounded-full px-8 pt-2 h-12 w-full no-scrollbar"
               ></textarea>
 
               {/* Character count */}
