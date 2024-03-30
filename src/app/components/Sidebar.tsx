@@ -47,7 +47,7 @@ const Sidebar = () => {
             <li>
               <Link href={"/Dashboard"}>
                 <button
-                  className="hover:bg-gray-800 p-2 rounded-lg transition-all"
+                  className="hover:bg-gray-800 p-2 rounded-lg relative transition-all"
                   onClick={toggleDrawer}
                 >
                   <svg
@@ -64,6 +64,11 @@ const Sidebar = () => {
                       d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"
                     ></path>
                   </svg>
+                  {/* Coversations Count Wrap */}
+                  <div className="flex items-center justify-center bg-white text-black p-2 rounded-full absolute right-0 top-0 size-3 text-[12px]">
+                    {/* Coversations Count */}
+                    <p>0</p>
+                  </div>
                 </button>
               </Link>
             </li>
@@ -285,7 +290,7 @@ const Sidebar = () => {
         </ul>
       </div>
 
-      {/* Drawer component */}
+      {/* Left Drawer component */}
       <div
         className={`Drawer ${
           isDrawerOpen ? "w-96" : "w-0 overflow-hidden"
@@ -332,25 +337,22 @@ const Sidebar = () => {
         {/* Drawer content */}
         <div className="flex flex-col items-center justify-center p-5 px-6 gap-4">
           {/* Drawer Search for conversations */}
-          <div className="flex items-center justify-between px-4 py-2 w-full border-2 rounded-lg">
+          <label className="input input-bordered flex items-center gap-2 p-2 bg-white text-sm border-2 border-gray-200 w-[100%]">
             <input
-              className="bg-transparent text-sm"
-              placeholder="Search for conversation"
               type="text"
-              value=""
+              className="grow"
+              placeholder="Search for conversation"
             />
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#000000"
-                viewBox="0 0 256 256"
-              >
-                <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
-              </svg>
-            </span>
-          </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+            </svg>
+          </label>
           {/* Button for new Conversation */}
           <button className="flex items-center justify-center py-3 bg-black text-white rounded-lg w-full">
             +New Conversation

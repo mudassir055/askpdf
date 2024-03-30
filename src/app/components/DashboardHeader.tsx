@@ -3,7 +3,7 @@ import Drawer from "./Drawer";
 // DashboardHeader component
 const DashboardHeader = () => {
   return (
-    <div className="h-[14%]">
+    <div className="flex flex-col h-[14%]">
       {/* Header section */}
       <header className="flex justify-between w-full pb-2 pt-3 pl-8 pr-8">
         {/* Left section of the header */}
@@ -151,7 +151,7 @@ const DashboardHeader = () => {
       </header>
 
       {/* Subheader PDF Name */}
-      <div className="bg-gray-100 flex p-2 justify-center items-center">
+      <div className="bg-gray-100 flex p-2 justify-center items-center flex-grow">
         <p className="text-xs text-black font-normal">
           Ask me about Chapter 1 (1).pdf. <span>View Doc</span>
         </p>
