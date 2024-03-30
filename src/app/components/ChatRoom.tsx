@@ -6,15 +6,23 @@ const ChatRoom = () => {
   return (
     <div className="flex flex-col h-full w-full">
       {/* Chat messages container */}
-      <div className="bg-gray-50 overflow-y-auto p-4" id="style-3">
+      <div className="bg-gray-50 overflow-y-auto p-4 h-full">
         {/* Response bubbles for incoming messages */}
-        <ResponseBubble />
+        <ResponseBubble
+          resBody="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Accusamus deserunt laborum quidem dolores, quasi, repellat quae
+              exercitationem, harum quibusdam non dignissimos enim nam
+              praesentium et obcaecati ut amet. Est, beatae!"
+          date="set date"
+          time="set time"
+        />
 
         {/* Outgoing message bubbles */}
-        <MessageBubble />
-        <MessageBubble />
-        <MessageBubble />
-        <MessageBubble />
+        <MessageBubble
+          messageBody="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+          date="set date"
+          time="set time"
+        />
       </div>
 
       {/* Chat input and action buttons */}

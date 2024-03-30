@@ -1,6 +1,12 @@
 import React from "react";
 
-const ResponseBubble = () => {
+interface Props {
+  resBody: string;
+  date: string;
+  time: string;
+}
+
+const ResponseBubble: React.FC<Props> = ({ resBody, date, time }) => {
   return (
     <div className="flex justify-start">
       {/* Container for response bubble */}
@@ -12,17 +18,13 @@ const ResponseBubble = () => {
           {/* Bubble for response content */}
           <div className="p-4 bg-white rounded-2xl">
             {/* Text content of the response */}
-            <p className="text-sm text-black">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusamus deserunt laborum quidem dolores, quasi, repellat quae
-              exercitationem, harum quibusdam non dignissimos enim nam
-              praesentium et obcaecati ut amet. Est, beatae!
-            </p>
+            <p className="text-sm text-black">{resBody}</p>
           </div>
           {/* Footer for the response */}
-          <div className="p-2">
+          <div className="p-2 flex gap-1">
             {/* Footer text */}
-            <p className="text-sm text-black">Message Footer</p>
+            <p className="text-sm text-black">{date},</p>
+            <p className="text-sm text-black">{time}</p>
           </div>
         </div>
         {/* Container for icon */}

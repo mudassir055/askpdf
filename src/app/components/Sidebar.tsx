@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import Conversation from "./Conversation";
 
 const Sidebar = () => {
   // State to track whether the drawer is open or closed
@@ -293,7 +294,7 @@ const Sidebar = () => {
       {/* Left Drawer component */}
       <div
         className={`Drawer ${
-          isDrawerOpen ? "w-96" : "w-0 overflow-hidden"
+          isDrawerOpen ? "w-96" : "w-0 overflow-hidden hidden"
         } bg-gray-50 transition-all`}
       >
         {/* Drawer header */}
@@ -335,7 +336,7 @@ const Sidebar = () => {
           <div>Upgrade to access more features</div>
         </div>
         {/* Drawer content */}
-        <div className="flex flex-col items-center justify-center p-5 px-6 gap-4">
+        <div className="flex flex-col items-stretch justify-center p-5 px-6 gap-4 ">
           {/* Drawer Search for conversations */}
           <label className="input input-bordered flex items-center gap-2 p-2 bg-white text-sm border-2 border-gray-200 w-[100%]">
             <input
@@ -360,27 +361,10 @@ const Sidebar = () => {
           {/* Drawer Conversations list */}
           <div className="flex flex-col gap-4">
             <p className="text-[12px] text-black font-semibold">YESTERDAY</p>
-            <div className="flex gap-2 bg-gray-200 p-4 rounded-lg">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="#101828"
-                  viewBox="0 0 256 256"
-                >
-                  <path d="M216,48H40A16,16,0,0,0,24,64V224a15.84,15.84,0,0,0,9.25,14.5A16.05,16.05,0,0,0,40,240a15.89,15.89,0,0,0,10.25-3.78.69.69,0,0,0,.13-.11L82.5,208H216a16,16,0,0,0,16-16V64A16,16,0,0,0,216,48ZM40,224h0ZM216,192H82.5a16,16,0,0,0-10.3,3.75l-.12.11L40,224V64H216Z"></path>
-                </svg>
-              </div>
-              <div>
-                {/* Conversation title  */}
-                <h2 className="text-black font-semibold">Chapter 1 (1)</h2>
-                {/* Conversation text */}
-                <p className="text-[12px]">
-                  Dr. F.Z. Khan teaches a course on Computer ...
-                </p>
-              </div>
-            </div>
+            <Conversation
+              name="Chapter 1 (1)"
+              starterText="Documents starting body text goes here"
+            />
           </div>
         </div>
       </div>

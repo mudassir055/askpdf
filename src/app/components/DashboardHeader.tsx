@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Drawer from "./Drawer";
 
 // DashboardHeader component
@@ -88,10 +89,59 @@ const DashboardHeader = () => {
                 className="dropdown-content z-[1] menu p-1 shadow bg-white w-52 mt-4 rounded-lg"
               >
                 <li>
-                  <a>Item 1</a>
+                  <label className="label cursor-pointer flex justify-start">
+                    <input
+                      type="radio"
+                      name="radio-10"
+                      className="radio default:bg-white checked:bg-slate-400"
+                      checked
+                    />
+                    <span className="label-text">Blue pill</span>
+                  </label>
                 </li>
                 <li>
-                  <a>Item 2</a>
+                  <label className="label cursor-pointer flex justify-start">
+                    <input
+                      type="radio"
+                      name="radio-10"
+                      className="radio default:bg-white checked:bg-slate-400"
+                      checked
+                    />
+                    <span className="label-text">Blue pill</span>
+                  </label>
+                </li>
+                <li>
+                  <label className="label cursor-pointer flex justify-start">
+                    <input
+                      type="radio"
+                      name="radio-10"
+                      className="radio default:bg-white checked:bg-slate-400"
+                      checked
+                    />
+                    <span className="label-text">Blue pill</span>
+                  </label>
+                </li>
+                <li>
+                  <label className="label cursor-pointer flex justify-start">
+                    <input
+                      type="radio"
+                      name="radio-10"
+                      className="radio default:bg-white checked:bg-slate-400"
+                      checked
+                    />
+                    <span className="label-text">Blue pill</span>
+                  </label>
+                </li>
+                <li>
+                  <label className="label cursor-pointer flex justify-start">
+                    <input
+                      type="radio"
+                      name="radio-10"
+                      className="radio default:bg-white checked:bg-slate-400"
+                      checked
+                    />
+                    <span className="label-text">Blue pill</span>
+                  </label>
                 </li>
               </ul>
             </div>
@@ -137,13 +187,19 @@ const DashboardHeader = () => {
             {/* Dropdown options */}
             <ul
               tabIndex={0}
-              className="dropdown-content z-[1] menu p-1 shadow bg-white w-52 mt-4"
+              className="dropdown-content z-[1] menu p-1 shadow bg-white w-52 mt-4 rounded-lg"
             >
-              <li>
-                <a>Item 1</a>
+              <li className="border-b-2 text-black font-medium border-gray-50">
+                <Link href={"#"}>Share </Link>
               </li>
-              <li>
-                <a>Item 2</a>
+              <li className="border-b-2 text-black font-medium border-gray-50">
+                <Link href={"#"}>Copy Id</Link>
+              </li>
+              <li className="border-b-2 text-black font-medium border-gray-50">
+                <Link href={"#"}>Export Chat as PDF</Link>
+              </li>
+              <li className="border-b-2 text-black font-medium border-gray-50">
+                <Link href={"#"}>Delete</Link>
               </li>
             </ul>
           </div>

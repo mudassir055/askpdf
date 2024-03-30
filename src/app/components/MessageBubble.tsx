@@ -1,6 +1,11 @@
 import React from "react";
+interface Props {
+  messageBody: string;
+  date: string;
+  time: string;
+}
 
-const MessageBubble = () => {
+const MessageBubble: React.FC<Props> = ({ messageBody, date, time }) => {
   return (
     <div className="flex justify-end">
       {/* Container for message bubble */}
@@ -12,9 +17,7 @@ const MessageBubble = () => {
           {/* Bubble for message content */}
           <div className="p-4 bg-white rounded-2xl">
             {/* Text content of the message */}
-            <p className="text-sm text-black">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            <p className="text-sm text-black">{messageBody}</p>
           </div>
           {/* Footer for the message */}
           <div className="p-2">
