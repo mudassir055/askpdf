@@ -7,13 +7,16 @@ interface Props {
 
 const Document: React.FC<Props> = ({ name, uploadDate }) => {
   return (
-    <div className="flex w-full justify-between p-3 bg-gray-100 rounded-xl">
+    <div className="flex w-full justify-between p-3 bg-neutral rounded-xl">
       <div className="flex gap-4 flex-grow">
-        <input type="checkbox" className="checkbox size-5 border-gray-400" />
+        <input
+          type="checkbox"
+          className="checkbox size-5 border-neutral-content"
+        />
         <div className="flex flex-col gap-2">
-          <p className="text-black">{name}</p>
-          <p className="text-black font-light">{uploadDate}</p>
-          <button className="flex text-orange-300 gap-2">
+          <p className="">{name}</p>
+          <p className=" font-light">{uploadDate}</p>
+          <button className="flex text-accent gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -33,7 +36,6 @@ const Document: React.FC<Props> = ({ name, uploadDate }) => {
         height="20"
         fill="currentColor"
         viewBox="0 0 256 256"
-        className="text-black"
       >
         <path d="M128,96a32,32,0,1,0,32,32A32,32,0,0,0,128,96Zm0,40a8,8,0,1,1,8-8A8,8,0,0,1,128,136Zm0-56A32,32,0,1,0,96,48,32,32,0,0,0,128,80Zm0-40a8,8,0,1,1-8,8A8,8,0,0,1,128,40Zm0,136a32,32,0,1,0,32,32A32,32,0,0,0,128,176Zm0,40a8,8,0,1,1,8-8A8,8,0,0,1,128,216Z"></path>
       </svg>

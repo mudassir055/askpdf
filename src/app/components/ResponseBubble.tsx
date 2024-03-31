@@ -24,19 +24,26 @@ const ResponseBubble: React.FC<Props> = ({ resBody, date, time }) => {
       {/* Container for response bubble */}
       <div className="flex gap-4 p-2 w-9/12">
         {/* Circle for user avatar */}
-        <div className="min-w-8 h-8 bg-black rounded-full"></div>
+        <div className="chat-image flex h-full items-start avatar">
+          <div className="w-8 rounded-full">
+            <img
+              alt="Tailwind CSS chat bubble component"
+              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+            />
+          </div>
+        </div>
         {/* Container for response content */}
         <div className="flex flex-col">
           {/* Bubble for response content */}
-          <div className="p-4 bg-white rounded-2xl">
+          <div className="chat-bubble p-4 rounded-2xl">
             {/* Text content of the response */}
-            <p className="text-sm text-black">{resBody}</p>
+            <p className="text-sm ">{resBody}</p>
           </div>
           {/* Footer for the response */}
-          <div className="p-2 flex gap-1">
+          <div className="chat-footer p-2 flex gap-1">
             {/* Footer text */}
-            <p className="text-sm text-black">{date},</p>
-            <p className="text-sm text-black">{time}</p>
+            <p className="text-sm">{date},</p>
+            <p className="text-sm">{time}</p>
           </div>
         </div>
         {/* Container for icon */}

@@ -23,19 +23,26 @@ const MessageBubble: React.FC<Props> = ({ messageBody, date, time }) => {
       {/* Container for message bubble */}
       <div className="flex gap-4 p-2 w-9/12 flex-row-reverse">
         {/* Circle for user avatar */}
-        <div className="min-w-8 h-8 bg-black rounded-full"></div>
+        <div className="chat-image flex h-full items-start avatar">
+          <div className="w-8 rounded-full">
+            <img
+              alt="Tailwind CSS chat bubble component"
+              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+            />
+          </div>
+        </div>
         {/* Container for message content */}
         <div className="flex flex-col">
           {/* Bubble for message content */}
-          <div className="p-4 bg-white rounded-2xl">
+          <div className="chat-bubble">
             {/* Text content of the message */}
-            <p className="text-sm text-black">{messageBody}</p>
+            <p className="text-sm">{messageBody}</p>
           </div>
           {/* Footer for the message */}
-          <div className="p-2 flex gap-1">
+          <div className="chat-footer opacity-50 p-2 flex gap-1">
             {/* Footer text */}
-            <p className="text-sm text-black text-right">{date},</p>
-            <p className="text-sm text-black text-right">{time}</p>
+            <p className="text-sm text-right">{date},</p>
+            <p className="text-sm text-right">{time}</p>
           </div>
         </div>
         {/* Copy Button */}

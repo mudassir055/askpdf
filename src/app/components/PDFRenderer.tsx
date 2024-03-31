@@ -18,20 +18,20 @@ const PDFRenderer = () => {
         //className={`hidden lg:flex lg:flex-col lg:h-full lg:w-full`}
         className={`flex flex-col h-full absolute left-0 ${
           isOpen ? "w-full" : "w-0 overflow-hidden"
-        } bg-slate-50 transition-all lg:static lg:w-full`}
+        } transition-all lg:static lg:w-full z-[1]`}
       >
         {/* PDF content */}
-        <div className="bg-white flex-grow overflow-y-auto p-4">
+        <div className="flex-grow overflow-y-auto p-4 bg-base-100">
           <p>PDF View</p>
         </div>
 
         {/* Footer with PDF controls */}
-        <footer className="flex justify-between items-start bg-white p-4 pb-7 min-h-16">
+        <footer className="flex justify-between items-start bg-neutral p-4 pb-7 min-h-24 max-h-24">
           <div className="flex justify-between items-center w-full">
             {/* PDF control buttons */}
             <div className="flex gap-2">
               {/* Button for explaining images */}
-              <button className="flex items-center justify-center gap-2 rounded-lg border-gray-300 border-2 py-2 px-4">
+              <button className="btn rounded-lg border-neutral-content border-2 py-2 px-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -39,7 +39,7 @@ const PDFRenderer = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#344054"
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -57,7 +57,7 @@ const PDFRenderer = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#344054"
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -73,7 +73,7 @@ const PDFRenderer = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#344054"
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -89,7 +89,7 @@ const PDFRenderer = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#344054"
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -99,7 +99,7 @@ const PDFRenderer = () => {
               </button>
             </div>
             {/* Display current page number */}
-            <div className="font-semibold text-black">
+            <div className="font-semibold">
               <p>Page 4 of 16</p>
             </div>
           </div>
@@ -107,10 +107,19 @@ const PDFRenderer = () => {
       </div>
       {/* Button to toggle PDF view visibility on small screens */}
       <button
-        className="absolute top-52 -ml-4 p-2 rounded bg-black h-32 lg:hidden"
+        className="absolute top-52  p-2 rounded bg-black h-2 lg:hidden z-[2]"
         onClick={toggleRenderer}
       >
-        Click
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="15"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+          transform={isOpen ? "rotate(180)" : "rotate(0)"}
+        >
+          <path d="M144.49,136.49l-80,80a12,12,0,0,1-17-17L119,128,47.51,56.49a12,12,0,0,1,17-17l80,80A12,12,0,0,1,144.49,136.49Zm80-17-80-80a12,12,0,1,0-17,17L199,128l-71.52,71.51a12,12,0,0,0,17,17l80-80A12,12,0,0,0,224.49,119.51Z"></path>
+        </svg>
       </button>
     </>
   );

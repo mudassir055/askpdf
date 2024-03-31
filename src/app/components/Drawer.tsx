@@ -23,12 +23,12 @@ const Drawer = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="menu flex p-4 w-96 h-full bg-white">
+        <div className="menu flex p-4 w-full lg:w-96 h-full bg-base-100">
           {/* Sidebar content here */}
           <div className="flex flex-col justify-start p-2 gap-6 h-[100%]">
             {/* Header  */}
             <div className="flex justify-between items-center">
-              <div className="flex p-2 gap-2 text-black">
+              <div className="flex p-2 gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -36,7 +36,7 @@ const Drawer = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#344054"
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="1.667"
@@ -55,7 +55,7 @@ const Drawer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
-                  fill="#475467"
+                  fill="currentColor"
                   viewBox="0 0 256 256"
                 >
                   <path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path>
@@ -63,7 +63,7 @@ const Drawer = () => {
               </label>
             </div>
             {/* Search Input  */}
-            <label className="input input-bordered flex items-center gap-2 p-2 bg-white text-sm border-2 border-gray-200">
+            <label className="input input-bordered flex items-center gap-2 p-2  text-sm border-2">
               <input
                 type="text"
                 className="grow"
@@ -73,21 +73,19 @@ const Drawer = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="#000000"
+                fill="currentColor"
                 viewBox="0 0 256 256"
               >
                 <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
               </svg>
             </label>
             {/* Tabs Container */}
-            <div className="flex border-2 rounded-lg justify-between">
+            <div className="flex rounded-lg justify-between">
               {/* Tab  */}
               <div
                 className={`flex ${
-                  activeTab === 1
-                    ? "text-white bg-black"
-                    : "text-black bg-white"
-                } p-3 gap-2 rounded-l-lg flex-grow`}
+                  activeTab === 1 ? "bg-base-300" : " bg-neutral"
+                } p-3 gap-2 rounded-l-lg w-1/2`}
                 onClick={() => handleTabClick(1)}
               >
                 <svg
@@ -109,10 +107,8 @@ const Drawer = () => {
               {/* Tab  */}
               <div
                 className={`flex ${
-                  activeTab === 2
-                    ? "text-white bg-black"
-                    : "text-black bg-white"
-                } p-3 gap-2 rounded-r-lg w-`}
+                  activeTab === 2 ? " bg-base-300" : " bg-neutral"
+                } p-3 gap-2 rounded-r-lg w-1/2`}
                 onClick={() => handleTabClick(2)}
               >
                 <svg
@@ -152,7 +148,7 @@ const Drawer = () => {
                   activeTab === 2 ? "flex" : "hidden"
                 } flex-col justify-center h-full items-center`}
               >
-                <div className="flex flex-col items-center text-black justify-center gap-4">
+                <div className="flex flex-col items-center justify-center gap-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="55"
@@ -168,13 +164,15 @@ const Drawer = () => {
                     button below to upgrade your account and access more
                     features
                   </p>
-                  <button className="btn text-white px-16">Upgrade</button>
+                  <button className="btn border-2 border-neutral-content px-16">
+                    Upgrade
+                  </button>
                 </div>
               </div>
             </div>
             {/* Tabs Footer  */}
             <div className="flex justify-end">
-              <button className="flex p-2 px-4 bg-black rounded-lg text-white gap-2">
+              <button className="btn border-2 border-neutral-content px-4 rounded-lg gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

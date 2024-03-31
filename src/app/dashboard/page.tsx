@@ -7,7 +7,7 @@ import ChatRoom from "../components/ChatRoom";
 const Dashboard = () => {
   return (
     // Main container for the dashboard layout
-    <div className="flex w-full h-screen bg-white">
+    <div className="flex w-full h-dvh">
       {/* Sidebar component */}
       <Sidebar />
       {/* Container for the main content */}

@@ -15,7 +15,7 @@ const Sidebar = () => {
       {/* Hidden sidebar on small screens */}
 
       {/* Main sidebar container */}
-      <div className="lg:min-h-full lg:bg-black lg:w-20 lg:flex lg:flex-col lg:justify-between lg:items-center lg:p-4 lg:z-10">
+      <div className="lg:min-h-full bg-base-300 lg:w-20 lg:flex lg:flex-col lg:justify-between lg:items-center lg:p-4 lg:z-10">
         <div className="flex flex-col items-center gap-2">
           {/* Logo */}
           {/* Link to home page */}
@@ -43,12 +43,12 @@ const Sidebar = () => {
             </div>
           </Link>
           {/* Sidebar navigation */}
-          <ul className="p-4 bg-black text-white flex flex-col justify-start items-center gap-3">
+          <ul className="p-4 flex flex-col justify-start items-center gap-3">
             {/* Each navigation item */}
             <li>
               <Link href={"/dashboard"}>
                 <button
-                  className="hover:bg-gray-800 p-2 rounded-lg relative transition-all"
+                  className="hover:bg-neutral p-2 rounded-lg relative transition-all"
                   onClick={toggleDrawer}
                 >
                   <svg
@@ -58,7 +58,7 @@ const Sidebar = () => {
                     fill="none"
                   >
                     <path
-                      stroke="#fff"
+                      stroke="currentColor"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="1.622"
@@ -66,7 +66,7 @@ const Sidebar = () => {
                     ></path>
                   </svg>
                   {/* Coversations Count Wrap */}
-                  <div className="flex items-center justify-center bg-white text-black p-2 rounded-full absolute right-0 top-0 size-3 text-[12px]">
+                  <div className="flex items-center justify-center bg-neutral p-2 rounded-full absolute right-0 top-0 size-3 text-[12px]">
                     {/* Coversations Count */}
                     <p>0</p>
                   </div>
@@ -75,12 +75,12 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    fill="#FFFFFF"
+                    fill="currentColor"
                     viewBox="0 0 256 256"
                   >
                     <path d="M93.31,70,28,128l65.27,58a8,8,0,1,1-10.62,12l-72-64a8,8,0,0,1,0-12l72-64A8,8,0,1,1,93.31,70Zm152,52-72-64a8,8,0,0,0-10.62,12L228,128l-65.27,58a8,8,0,1,0,10.62,12l72-64a8,8,0,0,0,0-12Z"></path>
@@ -90,12 +90,12 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    fill="#FFFFFF"
+                    fill="currentColor"
                     viewBox="0 0 256 256"
                   >
                     <path d="M248,128a87.34,87.34,0,0,1-17.6,52.81,8,8,0,1,1-12.8-9.62A71.34,71.34,0,0,0,232,128a72,72,0,0,0-144,0,8,8,0,0,1-16,0,88,88,0,0,1,3.29-23.88C74.2,104,73.1,104,72,104a48,48,0,0,0,0,96H96a8,8,0,0,1,0,16H72A64,64,0,1,1,81.29,88.68,88,88,0,0,1,248,128Zm-90.34-5.66a8,8,0,0,0-11.32,0l-32,32a8,8,0,0,0,11.32,11.32L144,147.31V208a8,8,0,0,0,16,0V147.31l18.34,18.35a8,8,0,0,0,11.32-11.32Z"></path>
@@ -105,12 +105,12 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    fill="#FFFFFF"
+                    fill="currentColor"
                     viewBox="0 0 256 256"
                   >
                     <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"></path>
@@ -120,12 +120,12 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    fill="#FFFFFF"
+                    fill="currentColor"
                     viewBox="0 0 256 256"
                   >
                     <path d="M221.28,34.75a64,64,0,0,0-90.49,0L60.69,104A15.9,15.9,0,0,0,56,115.31v73.38L26.34,218.34a8,8,0,0,0,11.32,11.32L67.32,200H140.7A15.92,15.92,0,0,0,152,195.32l0,0,69.23-70A64,64,0,0,0,221.28,34.75ZM142.07,46.06A48,48,0,0,1,211.79,112H155.33l34.35-34.34a8,8,0,0,0-11.32-11.32L120,124.69V67.87ZM72,115.35l32-31.67v57l-32,32ZM140.7,184H83.32l56-56h56.74Z"></path>
@@ -135,12 +135,12 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    fill="#FFFFFF"
+                    fill="currentColor"
                     viewBox="0 0 256 256"
                   >
                     <path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path>
@@ -150,14 +150,14 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
                     fill="none"
                   >
-                    <g fill="#fff" clipPath="url(#Tools_svg__a)">
+                    <g fill="currentColor" clipPath="url(#Tools_svg__a)">
                       <path d="m15.45 12.3-1.35 1.35L15.45 15l-1.8 1.8 6.45 6.45c.9.9 2.25.9 3.15 0 .9-.9.9-2.25 0-3.15l-7.8-7.8Zm5.85 10.2c-.6 0-1.2-.45-1.2-1.2 0-.6.45-1.2 1.2-1.2s1.2.45 1.2 1.2-.45 1.2-1.2 1.2ZM5.4 12l1.35-.9L9 8.55l1.35 1.35 1.35-1.35-.15-.15c.3-.75.45-1.5.45-2.4 0-3.3-2.7-6-6-6-.9 0-1.65.15-2.4.45L7.95 4.8 4.8 7.95.45 3.6C.15 4.35 0 5.1 0 6c0 3.15 2.4 5.55 5.4 6Z"></path>
                       <path d="m12 16.2 1.35-1.2L12 13.65l8.55-8.55 1.8-.6L24 1.2 22.95.15l-3.45 1.5-.75 1.8-8.4 8.55L9 10.65 7.8 12s1.2.9-.15 2.25c-.75.75-1.95-.15-4.2 2.1L.3 19.5s-.9 1.5.9 3.3c1.8 1.8 3.3.9 3.3.9l3.15-3.15C9.75 18.45 9 17.1 9.6 16.5c1.35-1.35 2.4-.3 2.4-.3Zm-4.65-.6 1.05 1.05-5.7 5.7-1.05-1.05 5.7-5.7Z"></path>
                     </g>
@@ -174,11 +174,11 @@ const Sidebar = () => {
         </div>
 
         {/* Secondary sidebar navigation */}
-        <ul className="p-4 bg-black text-white flex flex-col justify-start items-center gap-3 pb-0">
+        <ul className="p-4 flex flex-col justify-start items-center gap-3 pb-0">
           {/* Each navigation item */}
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -186,7 +186,7 @@ const Sidebar = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#fff"
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -198,7 +198,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -206,7 +206,7 @@ const Sidebar = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#fff"
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -218,7 +218,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -226,7 +226,7 @@ const Sidebar = () => {
                   fill="none"
                 >
                   <g
-                    stroke="#fff"
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -237,7 +237,7 @@ const Sidebar = () => {
                   </g>
                   <defs>
                     <clipPath id="Settings_svg__a">
-                      <path fill="#fff" d="M0 0h24v24H0z"></path>
+                      <path fill="currentColor" d="M0 0h24v24H0z"></path>
                     </clipPath>
                   </defs>
                 </svg>
@@ -246,7 +246,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -254,11 +254,11 @@ const Sidebar = () => {
                   fill="none"
                 >
                   <path
-                    fill="#EAEAEA"
+                    fill="currentColor"
                     d="M24 11.997a11.956 11.956 0 0 1-3.766 8.727l-.044.042-.017.015a11.917 11.917 0 0 1-3.007 2.049l-.27.126c-1.365.61-2.83.958-4.323 1.027h-.042a12.632 12.632 0 0 1-1.065 0h-.042a11.913 11.913 0 0 1-4.47-1.094l-.123-.059a11.72 11.72 0 0 1-2.033-1.23c-.333-.25-.652-.517-.956-.8l-.018-.016-.085-.081a.253.253 0 0 1-.03-.027l-.07-.068A12 12 0 1 1 24 11.998Z"
                   ></path>
                   <path
-                    stroke="#101828"
+                    stroke="#000"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="1.661"
@@ -270,7 +270,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-gray-800 p-2 rounded-lg transition-all">
+              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -278,7 +278,7 @@ const Sidebar = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#fff"
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -295,28 +295,28 @@ const Sidebar = () => {
       <div
         className={`Drawer ${
           isDrawerOpen ? "w-96" : "w-0 overflow-hidden hidden"
-        } bg-gray-50 transition-all`}
+        }  transition-all`}
       >
         {/* Drawer header */}
         <header className="flex justify-between items-center p-4 w-full">
           {/* Logo and upgrade button */}
           <div className="flex w-[50%] gap-2">
             {/* Logo */}
-            <h1 className=" text-black font-semibold">ASKYOURPDF</h1>
+            <h1 className=" font-semibold">ASKYOURPDF</h1>
             {/* Upgrade badge */}
-            <div className="flex items-center bg-green-100 text-green-600 rounded-full px-2 text-[12px]">
+            <div className="flex items-center bg-neutral  rounded-full px-2 text-[12px]">
               Free
             </div>
           </div>
           {/* Upgrade button and close button */}
           <div className="flex items-center justify-between gap-2 w-[50%]">
             {/* Upgrade button */}
-            <button className="bg-black text-yellow-500 rounded-lg px-6 py-2">
+            <button className="btn border-neutral-content border-2 rounded-lg px-6 py-2">
               Upgrade
             </button>
             {/* Close button */}
             <button
-              className="flex items-center justify-center p-2 hover:bg-gray-200 text-black rounded-lg transition-all"
+              className="flex items-center justify-center p-2 hover:bg-neutral rounded-lg transition-all"
               onClick={toggleDrawer}
             >
               <svg
@@ -332,13 +332,13 @@ const Sidebar = () => {
           </div>
         </header>
         {/* Upgrade Message */}
-        <div className="flex items-center justify-center p-3 bg-orange-100 text-sm text-black">
+        <div className="flex items-center justify-center p-3 bg-accent text-sm text-black">
           <div>Upgrade to access more features</div>
         </div>
         {/* Drawer content */}
         <div className="flex flex-col items-stretch justify-center p-5 px-6 gap-4 ">
           {/* Drawer Search for conversations */}
-          <label className="input input-bordered flex items-center gap-2 p-2 bg-white text-sm border-2 border-gray-200 w-[100%]">
+          <label className="input input-bordered flex items-center gap-2 p-2 text-sm border-2 border-neutral w-[100%]">
             <input
               type="text"
               className="grow"
@@ -355,12 +355,12 @@ const Sidebar = () => {
             </svg>
           </label>
           {/* Button for new Conversation */}
-          <button className="flex items-center justify-center py-3 bg-black text-white rounded-lg w-full">
+          <button className="btn flex items-center justify-center py-3 border-neutral-content border-2 rounded-lg w-full">
             +New Conversation
           </button>
           {/* Drawer Conversations list */}
           <div className="flex flex-col gap-4">
-            <p className="text-[12px] text-black font-semibold">YESTERDAY</p>
+            <p className="text-[12px]  font-semibold">YESTERDAY</p>
             <Conversation
               name="Chapter 1 (1)"
               starterText="Documents starting body text goes here"

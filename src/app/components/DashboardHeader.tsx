@@ -74,13 +74,13 @@ const DashboardHeader = () => {
             <div className="dropdown dropdown-end">
               {/* Language dropdown button */}
               <div tabIndex={0} role="button">
-                <div className="hidden lg:flex lg:justify-center items-center gap-2 p-2 pl-4 pr-4 bg-black text-white rounded-2xl border-black border-2">
+                <div className="hidden btn lg:flex lg:justify-center items-center gap-2 p-2 pl-4 pr-4 rounded-2xl border-2 border-neutral-content">
                   <span className="font-semibold">EN </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
-                    fill="#ffffff"
+                    fill="currentColor"
                     viewBox="0 0 256 256"
                   >
                     <path d="M208.49,152.49l-72,72a12,12,0,0,1-17,0l-72-72a12,12,0,0,1,17-17L116,187V40a12,12,0,0,1,24,0V187l51.51-51.52a12,12,0,0,1,17,17Z"></path>
@@ -90,14 +90,14 @@ const DashboardHeader = () => {
               {/* Language dropdown options */}
               <ul
                 tabIndex={0}
-                className="dropdown-content z-[1] menu p-1 shadow bg-white w-52 mt-4 rounded-lg"
+                className="dropdown-content z-[1] menu p-1 shadow bg-neutral w-52 mt-4 rounded-lg"
               >
                 <li>
                   <label className="label cursor-pointer flex justify-start">
                     <input
                       type="radio"
                       name="radio-10"
-                      className="radio default:bg-white checked:bg-slate-400"
+                      className="radio checked:bg-slate-400"
                       checked
                     />
                     <span className="label-text">Blue pill</span>
@@ -108,7 +108,7 @@ const DashboardHeader = () => {
                     <input
                       type="radio"
                       name="radio-10"
-                      className="radio default:bg-white checked:bg-slate-400"
+                      className="radio checked:bg-slate-400"
                       checked
                     />
                     <span className="label-text">Blue pill</span>
@@ -119,7 +119,7 @@ const DashboardHeader = () => {
                     <input
                       type="radio"
                       name="radio-10"
-                      className="radio default:bg-white checked:bg-slate-400"
+                      className="radio checked:bg-slate-400"
                       checked
                     />
                     <span className="label-text">Blue pill</span>
@@ -130,7 +130,7 @@ const DashboardHeader = () => {
                     <input
                       type="radio"
                       name="radio-10"
-                      className="radio default:bg-white checked:bg-slate-400"
+                      className="radio checked:bg-slate-400"
                       checked
                     />
                     <span className="label-text">Blue pill</span>
@@ -141,7 +141,7 @@ const DashboardHeader = () => {
                     <input
                       type="radio"
                       name="radio-10"
-                      className="radio default:bg-white checked:bg-slate-400"
+                      className="radio checked:bg-slate-400"
                       checked
                     />
                     <span className="label-text">Blue pill</span>
@@ -154,7 +154,7 @@ const DashboardHeader = () => {
           {/* Button to toggle drawer on large screens */}
           <label
             htmlFor="my-drawer-4"
-            className="hidden lg:flex items-center justify-center gap-2 rounded-lg border-gray-300 border-2 py-2 px-4"
+            className="lg:btn flex items-center justify-center gap-2 rounded-lg border-neutral-content border-2 p-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -163,14 +163,14 @@ const DashboardHeader = () => {
               fill="none"
             >
               <path
-                stroke="#344054"
+                stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1.667"
                 d="M12.5 2.5v15m-6-15h7c1.4 0 2.1 0 2.635.272a2.5 2.5 0 0 1 1.092 1.093C17.5 4.4 17.5 5.1 17.5 6.5v7c0 1.4 0 2.1-.273 2.635a2.5 2.5 0 0 1-1.092 1.092c-.535.273-1.235.273-2.635.273h-7c-1.4 0-2.1 0-2.635-.273a2.5 2.5 0 0 1-1.093-1.092C2.5 15.6 2.5 14.9 2.5 13.5v-7c0-1.4 0-2.1.272-2.635a2.5 2.5 0 0 1 1.093-1.093C4.4 2.5 5.1 2.5 6.5 2.5Z"
               ></path>
             </svg>
-            My Documents
+            <p className=" lg:block">Documents</p>
           </label>
 
           {/* Right Menu dropdown */}
@@ -181,7 +181,7 @@ const DashboardHeader = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
-                fill="#000000"
+                fill="currentColor"
                 viewBox="0 0 256 256"
               >
                 <path d="M128,96a32,32,0,1,0,32,32A32,32,0,0,0,128,96Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,128,144Zm0-64A32,32,0,1,0,96,48,32,32,0,0,0,128,80Zm0-48a16,16,0,1,1-16,16A16,16,0,0,1,128,32Zm0,144a32,32,0,1,0,32,32A32,32,0,0,0,128,176Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,128,224Z"></path>
@@ -191,18 +191,18 @@ const DashboardHeader = () => {
             {/* Dropdown options */}
             <ul
               tabIndex={0}
-              className="dropdown-content z-[1] menu p-1 shadow bg-white w-52 mt-4 rounded-lg"
+              className="dropdown-content z-[1] menu p-1 shadow w-52 mt-5 rounded-lg bg-neutral"
             >
-              <li className="border-b-2 text-black font-medium border-gray-50">
+              <li className="border-b-2  font-medium border-neutral-content">
                 <Link href={"#"}>Share </Link>
               </li>
-              <li className="border-b-2 text-black font-medium border-gray-50">
+              <li className="border-b-2  font-medium border-neutral-content">
                 <Link href={"#"}>Copy Id</Link>
               </li>
-              <li className="border-b-2 text-black font-medium border-gray-50">
+              <li className="border-b-2  font-medium border-neutral-content">
                 <Link href={"#"}>Export Chat as PDF</Link>
               </li>
-              <li className="border-b-2 text-black font-medium border-gray-50">
+              <li className="border-b-2  font-medium border-neutral">
                 <Link href={"#"}>Delete</Link>
               </li>
             </ul>
@@ -211,8 +211,8 @@ const DashboardHeader = () => {
       </header>
 
       {/* Subheader PDF Name */}
-      <div className="bg-gray-100 flex p-2 justify-center items-center flex-grow">
-        <p className="text-xs text-black font-normal">
+      <div className="bg-neutral flex p-2 justify-center items-center flex-grow">
+        <p className="text-xs font-normal">
           Ask me about Chapter 1 (1).pdf. <span>View Doc</span>
         </p>
       </div>
