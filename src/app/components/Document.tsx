@@ -7,11 +7,11 @@ interface Props {
 
 const Document: React.FC<Props> = ({ name, uploadDate }) => {
   return (
-    <div className="flex w-full justify-between p-3 bg-neutral rounded-xl">
+    <div className="flex w-full justify-between p-3 bg-base-300 rounded-xl">
       <div className="flex gap-4 flex-grow">
         <input
           type="checkbox"
-          className="checkbox size-5 border-neutral-content"
+          className="checkbox size-5 border-base-content"
         />
         <div className="flex flex-col gap-2">
           <p className="">{name}</p>

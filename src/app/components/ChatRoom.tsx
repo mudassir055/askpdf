@@ -13,8 +13,12 @@ interface Message {
 // ChatRoom component renders the chat interface
 const ChatRoom = () => {
   const [messages, setMessages] = useState<Message[]>(() => {
-    const savedMessages = localStorage.getItem("messages");
-    return savedMessages ? JSON.parse(savedMessages) : [];
+    if (typeof window !== "undefined") {
+      const savedMessages = localStorage.getItem("messages");
+      return savedMessages ? JSON.parse(savedMessages) : [];
+    } else {
+      return [];
+    }
   });
 
   useEffect(() => {
@@ -84,7 +88,7 @@ const ChatRoom = () => {
   };
 
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="flex flex-col h-full w-full text-base-content">
       {/* Chat messages container */}
       <div className="overflow-y-auto p-4 h-full">
         {/* Response bubbles for incoming Response ... Call the handleMessage() on response from api with message body as pram */}
@@ -102,7 +106,7 @@ const ChatRoom = () => {
       </div>
 
       {/* Chat input and action buttons */}
-      <footer className="flex justify-between items-start bg-neutral pt-4 px-4 min-h-24 max-h-24">
+      <footer className="flex justify-between items-start bg-base-200 text-base-content pt-4 px-4 min-h-24 max-h-24">
         <div className="flex items-start justify-between flex-grow gap-4">
           {/* Button to clear chat history */}
           <button className="btn rounded-full p-3">

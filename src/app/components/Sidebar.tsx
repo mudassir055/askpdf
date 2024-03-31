@@ -15,7 +15,7 @@ const Sidebar = () => {
       {/* Hidden sidebar on small screens */}
 
       {/* Main sidebar container */}
-      <div className="lg:min-h-full bg-base-300 lg:w-20 lg:flex lg:flex-col lg:justify-between lg:items-center lg:p-4 lg:z-10">
+      <div className="lg:min-h-dvh bg-base-300 text-base-content lg:w-20 lg:flex lg:flex-col lg:justify-between lg:items-center lg:p-4 lg:z-10">
         <div className="flex flex-col items-center gap-2">
           {/* Logo */}
           {/* Link to home page */}
@@ -48,7 +48,7 @@ const Sidebar = () => {
             <li>
               <Link href={"/dashboard"}>
                 <button
-                  className="hover:bg-neutral p-2 rounded-lg relative transition-all"
+                  className="hover:bg-base-100 p-2 rounded-lg relative transition-all"
                   onClick={toggleDrawer}
                 >
                   <svg
@@ -66,7 +66,7 @@ const Sidebar = () => {
                     ></path>
                   </svg>
                   {/* Coversations Count Wrap */}
-                  <div className="flex items-center justify-center bg-neutral p-2 rounded-full absolute right-0 top-0 size-3 text-[12px]">
+                  <div className="flex items-center justify-center bg-base-200 p-2 rounded-full absolute right-0 top-0 size-3 text-[12px]">
                     {/* Coversations Count */}
                     <p>0</p>
                   </div>
@@ -75,7 +75,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+                <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -90,7 +90,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+                <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -105,7 +105,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+                <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -120,7 +120,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+                <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -135,7 +135,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+                <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -150,7 +150,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Link href={"/dashboard"}>
-                <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+                <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -178,7 +178,7 @@ const Sidebar = () => {
           {/* Each navigation item */}
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+              <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -198,7 +198,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+              <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -218,7 +218,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+              <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -246,7 +246,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+              <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -270,7 +270,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link href={"/dashboard"}>
-              <button className="hover:bg-neutral p-2 rounded-lg transition-all">
+              <button className="hover:bg-base-100 p-2 rounded-lg transition-all">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -295,7 +295,7 @@ const Sidebar = () => {
       <div
         className={`Drawer ${
           isDrawerOpen ? "w-96" : "w-0 overflow-hidden hidden"
-        }  transition-all`}
+        }  transition-all bg-base-100`}
       >
         {/* Drawer header */}
         <header className="flex justify-between items-center p-4 w-full">
@@ -316,7 +316,7 @@ const Sidebar = () => {
             </button>
             {/* Close button */}
             <button
-              className="flex items-center justify-center p-2 hover:bg-neutral rounded-lg transition-all"
+              className="flex items-center justify-center p-2 hover:bg-base-100 rounded-lg transition-all"
               onClick={toggleDrawer}
             >
               <svg

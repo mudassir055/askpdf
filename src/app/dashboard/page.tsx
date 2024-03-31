@@ -2,16 +2,20 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import DashboardHeader from "../components/DashboardHeader";
 import PDFRenderer from "../components/PDFRenderer";
-import ChatRoom from "../components/ChatRoom";
+import dynamic from "next/dynamic";
+
+const ChatRoom = dynamic(() => import("../components/ChatRoom"), {
+  ssr: false,
+});
 
 const Dashboard = () => {
   return (
     // Main container for the dashboard layout
-    <div className="flex w-full h-dvh">
+    <section className="flex w-full h-dvh">
       {/* Sidebar component */}
       <Sidebar />
       {/* Container for the main content */}
-      <div className="flex flex-col w-full h-full relative">
+      <main className="flex flex-col flex-grow h-full relative">
         {/* Dashboard header component */}
         <DashboardHeader />
         {/* Main content area, divided into two columns */}
@@ -21,8 +25,8 @@ const Dashboard = () => {
           {/* Component for chat room */}
           <ChatRoom />
         </div>
-      </div>
-    </div>
+      </main>
+    </section>
   );
 };
 

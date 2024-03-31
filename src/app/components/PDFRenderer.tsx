@@ -18,15 +18,15 @@ const PDFRenderer = () => {
         //className={`hidden lg:flex lg:flex-col lg:h-full lg:w-full`}
         className={`flex flex-col h-full absolute left-0 ${
           isOpen ? "w-full" : "w-0 overflow-hidden"
-        } transition-all lg:static lg:w-full z-[1]`}
+        } transition-all lg:static lg:w-full z-[1] lg:z-[-1] text-neutral-content`}
       >
         {/* PDF content */}
-        <div className="flex-grow overflow-y-auto p-4 bg-base-100">
+        <div className="flex-grow overflow-y-auto p-4 bg-base-100 text-base-content">
           <p>PDF View</p>
         </div>
 
         {/* Footer with PDF controls */}
-        <footer className="flex justify-between items-start bg-neutral p-4 pb-7 min-h-24 max-h-24">
+        <footer className="flex justify-between items-start bg-base-200 text-base-content p-4 pb-7 min-h-24 max-h-24">
           <div className="flex justify-between items-center w-full">
             {/* PDF control buttons */}
             <div className="flex gap-2">
@@ -107,7 +107,7 @@ const PDFRenderer = () => {
       </div>
       {/* Button to toggle PDF view visibility on small screens */}
       <button
-        className="absolute top-52  p-2 rounded bg-black h-2 lg:hidden z-[2]"
+        className="absolute top-52  p-2 rounded bg-black h-24 lg:hidden z-[2]"
         onClick={toggleRenderer}
       >
         <svg

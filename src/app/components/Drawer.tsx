@@ -23,7 +23,7 @@ const Drawer = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="menu flex p-4 w-full lg:w-96 h-full bg-base-100">
+        <div className="menu flex p-4 w-full lg:w-[25rem] h-full bg-base-100">
           {/* Sidebar content here */}
           <div className="flex flex-col justify-start p-2 gap-6 h-[100%]">
             {/* Header  */}
@@ -84,7 +84,7 @@ const Drawer = () => {
               {/* Tab  */}
               <div
                 className={`flex ${
-                  activeTab === 1 ? "bg-base-300" : " bg-neutral"
+                  activeTab === 1 ? "bg-base-300" : " bg-base-100"
                 } p-3 gap-2 rounded-l-lg w-1/2`}
                 onClick={() => handleTabClick(1)}
               >
@@ -107,7 +107,7 @@ const Drawer = () => {
               {/* Tab  */}
               <div
                 className={`flex ${
-                  activeTab === 2 ? " bg-base-300" : " bg-neutral"
+                  activeTab === 2 ? " bg-base-300" : " bg-base-100"
                 } p-3 gap-2 rounded-r-lg w-1/2`}
                 onClick={() => handleTabClick(2)}
               >

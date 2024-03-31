@@ -35,7 +35,7 @@ const ResponseBubble: React.FC<Props> = ({ resBody, date, time }) => {
         {/* Container for response content */}
         <div className="flex flex-col">
           {/* Bubble for response content */}
-          <div className="chat-bubble p-4 rounded-2xl">
+          <div className="chat-bubble bg-base-200 text-base-content p-4 rounded-2xl">
             {/* Text content of the response */}
             <p className="text-sm ">{resBody}</p>
           </div>

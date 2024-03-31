@@ -7,7 +7,7 @@ interface Props {
 
 const Conversation: React.FC<Props> = ({ name, starterText }) => {
   return (
-    <div className="flex gap-2 bg-neutral p-4 rounded-lg">
+    <div className="flex gap-2 bg-base-200 p-4 rounded-lg">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

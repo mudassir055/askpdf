@@ -34,7 +34,7 @@ const MessageBubble: React.FC<Props> = ({ messageBody, date, time }) => {
         {/* Container for message content */}
         <div className="flex flex-col">
           {/* Bubble for message content */}
-          <div className="chat-bubble">
+          <div className="chat-bubble bg-base-200 text-base-content">
             {/* Text content of the message */}
             <p className="text-sm">{messageBody}</p>
           </div>
