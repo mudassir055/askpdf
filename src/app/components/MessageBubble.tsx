@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 interface Props {
   messageBody: string;
   date: string;
@@ -6,6 +7,17 @@ interface Props {
 }
 
 const MessageBubble: React.FC<Props> = ({ messageBody, date, time }) => {
+  const [showCopyNotification, setShowCopyNotification] =
+    useState<boolean>(false);
+
+  const handleCopyText = () => {
+    navigator.clipboard.writeText(messageBody);
+    setShowCopyNotification(true);
+    setTimeout(() => {
+      setShowCopyNotification(false);
+    }, 2000); // Hide notification after 2 seconds
+  };
+
   return (
     <div className="flex justify-end">
       {/* Container for message bubble */}
@@ -20,13 +32,17 @@ const MessageBubble: React.FC<Props> = ({ messageBody, date, time }) => {
             <p className="text-sm text-black">{messageBody}</p>
           </div>
           {/* Footer for the message */}
-          <div className="p-2">
+          <div className="p-2 flex gap-1">
             {/* Footer text */}
-            <p className="text-sm text-black text-right">Message Footer</p>
+            <p className="text-sm text-black text-right">{date},</p>
+            <p className="text-sm text-black text-right">{time}</p>
           </div>
         </div>
-        {/* Container for icon */}
-        <div className="Icon-wrrap flex items-center justify-center mb-10">
+        {/* Copy Button */}
+        <button
+          className="Icon-wrrap flex items-center justify-center mb-10"
+          onClick={handleCopyText}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -48,8 +64,14 @@ const MessageBubble: React.FC<Props> = ({ messageBody, date, time }) => {
               d="M18.333 5.75v3.5c0 2.917-1.166 4.083-4.083 4.083h-.917V10.75c0-2.917-1.166-4.083-4.083-4.083H6.667V5.75c0-2.917 1.166-4.083 4.083-4.083h3.5c2.917 0 4.083 1.166 4.083 4.083Z"
             ></path>
           </svg>
-        </div>
+        </button>
       </div>
+      {/* Copy Notification */}
+      {showCopyNotification && (
+        <div className="absolute top-0 right-[40%] m-4 bg-gray-800 text-white p-2 rounded">
+          Message copied!
+        </div>
+      )}
     </div>
   );
 };

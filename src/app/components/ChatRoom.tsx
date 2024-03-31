@@ -1,13 +1,93 @@
+"use client";
 import MessageBubble from "./MessageBubble";
 import ResponseBubble from "./ResponseBubble";
+import { useState, useEffect } from "react";
+
+interface Message {
+  messageBody: string;
+  date: string;
+  time: string;
+  isResponse: boolean;
+}
 
 // ChatRoom component renders the chat interface
 const ChatRoom = () => {
+  const [messages, setMessages] = useState<Message[]>(() => {
+    const savedMessages = localStorage.getItem("messages");
+    return savedMessages ? JSON.parse(savedMessages) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("messages", JSON.stringify(messages));
+  }, [messages]);
+
+  const handleMessage = (newMessage: string): void => {
+    const currentTime = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    const currentDate = new Date().toLocaleDateString();
+    const message: Message = {
+      messageBody: newMessage,
+      date: currentDate,
+      time: currentTime,
+      isResponse: false,
+    };
+    setMessages([...messages, message]);
+  };
+
+  const handleResponse = (newMessage: string): void => {
+    const currentTime = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    const currentDate = new Date().toLocaleDateString();
+    const message: Message = {
+      messageBody: newMessage,
+      date: currentDate,
+      time: currentTime,
+      isResponse: true,
+    };
+    setMessages([...messages, message]);
+  };
+
+  const renderMessages = (): JSX.Element[] => {
+    return messages.map((message, index) => (
+      <div key={index}>
+        {message.isResponse ? (
+          <ResponseBubble
+            resBody={message.messageBody}
+            date={message.date}
+            time={message.time}
+          />
+        ) : (
+          <MessageBubble
+            messageBody={message.messageBody}
+            date={message.date}
+            time={message.time}
+          />
+        )}
+      </div>
+    ));
+  };
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const messageBody = formData.get("messageBody");
+    if (messageBody) {
+      handleMessage(messageBody.toString());
+      event.currentTarget.reset();
+    }
+  };
+
   return (
     <div className="flex flex-col h-full w-full">
       {/* Chat messages container */}
       <div className="bg-gray-50 overflow-y-auto p-4 h-full">
-        {/* Response bubbles for incoming messages */}
+        {/* Response bubbles for incoming Response ... Call the handleMessage() on response from api with message body as pram */}
         <ResponseBubble
           resBody="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Accusamus deserunt laborum quidem dolores, quasi, repellat quae
@@ -18,11 +98,7 @@ const ChatRoom = () => {
         />
 
         {/* Outgoing message bubbles */}
-        <MessageBubble
-          messageBody="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-          date="set date"
-          time="set time"
-        />
+        {renderMessages()}
       </div>
 
       {/* Chat input and action buttons */}
@@ -48,13 +124,17 @@ const ChatRoom = () => {
           </button>
 
           {/* Form for user input */}
-          <form className="flex items-start justify-between flex-grow gap-4">
+          <form
+            onSubmit={handleFormSubmit}
+            className="flex items-start justify-between flex-grow gap-4"
+          >
             {/* Text input for user message */}
             <span
               data-count="0 / 2000"
               className=" flex-grow flex flex-col items-end"
             >
               <textarea
+                name="messageBody"
                 placeholder="Ask any question about your document"
                 className=" bg-white border-2 rounded-full px-8 pt-2 h-12 w-full no-scrollbar"
               ></textarea>

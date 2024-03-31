@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 interface Props {
   resBody: string;
@@ -7,6 +8,17 @@ interface Props {
 }
 
 const ResponseBubble: React.FC<Props> = ({ resBody, date, time }) => {
+  const [showCopyNotification, setShowCopyNotification] =
+    useState<boolean>(false);
+
+  const handleCopyText = () => {
+    navigator.clipboard.writeText(resBody);
+    setShowCopyNotification(true);
+    setTimeout(() => {
+      setShowCopyNotification(false);
+    }, 2000); // Hide notification after 2 seconds
+  };
+
   return (
     <div className="flex justify-start">
       {/* Container for response bubble */}
@@ -28,7 +40,10 @@ const ResponseBubble: React.FC<Props> = ({ resBody, date, time }) => {
           </div>
         </div>
         {/* Container for icon */}
-        <div className="Icon-wrrap flex items-center justify-center mb-10">
+        <button
+          className="Icon-wrrap flex items-center justify-center mb-10"
+          onClick={handleCopyText}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -50,8 +65,14 @@ const ResponseBubble: React.FC<Props> = ({ resBody, date, time }) => {
               d="M18.333 5.75v3.5c0 2.917-1.166 4.083-4.083 4.083h-.917V10.75c0-2.917-1.166-4.083-4.083-4.083H6.667V5.75c0-2.917 1.166-4.083 4.083-4.083h3.5c2.917 0 4.083 1.166 4.083 4.083Z"
             ></path>
           </svg>
-        </div>
+        </button>
       </div>
+      {/* Copy Notification */}
+      {showCopyNotification && (
+        <div className="absolute top-0 right-[40%] m-4 bg-gray-800 text-white p-2 rounded">
+          Message copied!
+        </div>
+      )}
     </div>
   );
 };
