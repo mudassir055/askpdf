@@ -15,8 +15,8 @@ const Sidebar = () => {
       {/* Hidden sidebar on small screens */}
 
       {/* Main sidebar container */}
-      <div className="lg:min-h-dvh bg-base-300 text-base-content lg:w-20 lg:flex lg:flex-col lg:justify-between lg:items-center lg:p-4 lg:z-10">
-        <div className="flex flex-col items-center gap-2">
+      <div className="lg:h-full bg-base-300 text-base-content lg:w-20 lg:flex lg:flex-col lg:justify-between lg:items-center lg:p-4 lg:z-10">
+        <div className="flex flex-col items-center">
           {/* Logo */}
           {/* Link to home page */}
           <Link href={"/"}>
@@ -43,7 +43,7 @@ const Sidebar = () => {
             </div>
           </Link>
           {/* Sidebar navigation */}
-          <ul className="p-4 flex flex-col justify-start items-center gap-3">
+          <ul className="p-4 flex flex-col justify-between gap-2 items-center ">
             {/* Each navigation item */}
             <li>
               <Link href={"/dashboard"}>
@@ -174,7 +174,7 @@ const Sidebar = () => {
         </div>
 
         {/* Secondary sidebar navigation */}
-        <ul className="p-4 flex flex-col justify-start items-center gap-3 pb-0">
+        <ul className="p-4 flex flex-col justify-between gap-2 items-center  pb-0">
           {/* Each navigation item */}
           <li>
             <Link href={"/dashboard"}>

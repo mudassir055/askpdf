@@ -90,7 +90,7 @@ const DashboardHeader = () => {
               {/* Language dropdown options */}
               <ul
                 tabIndex={0}
-                className="dropdown-content z-[1] menu p-1 shadow bg-neutral w-52 mt-4 rounded-lg"
+                className="dropdown-content z-[1] menu p-1 shadow bg-base-100 w-52 mt-4 rounded-lg"
               >
                 <li>
                   <label className="label cursor-pointer flex justify-start">
@@ -149,7 +149,7 @@ const DashboardHeader = () => {
           {/* Button to toggle drawer on large screens */}
           <label
             htmlFor="my-drawer-4"
-            className="btn flex items-center justify-center gap-2 rounded-lg border-neutral-content border-2 px-4"
+            className="hidden btn lg:flex items-center justify-center gap-2 rounded-lg border-neutral-content border-2 px-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -186,18 +186,18 @@ const DashboardHeader = () => {
             {/* Dropdown options */}
             <ul
               tabIndex={0}
-              className="dropdown-content z-[1] menu p-1 shadow w-52 mt-5 rounded-lg bg-neutral"
+              className="dropdown-content z-[1] menu p-1 shadow w-52 mt-5 rounded-lg bg-base-100"
             >
-              <li className="border-b-2  font-medium border-neutral-content">
+              <li className="  font-medium ">
                 <Link href={"#"}>Share </Link>
               </li>
-              <li className="border-b-2  font-medium border-neutral-content">
+              <li className="  font-medium ">
                 <Link href={"#"}>Copy Id</Link>
               </li>
-              <li className="border-b-2  font-medium border-neutral-content">
+              <li className=" font-medium ">
                 <Link href={"#"}>Export Chat as PDF</Link>
               </li>
-              <li className="border-b-2  font-medium border-neutral">
+              <li className="  font-medium">
                 <Link href={"#"}>Delete</Link>
               </li>
             </ul>
@@ -206,9 +206,15 @@ const DashboardHeader = () => {
       </header>
 
       {/* Subheader PDF Name */}
-      <div className="bg-base-200 flex p-2 justify-center items-center flex-grow">
+      <div className="bg-base-200 flex p-2 justify-center items-center">
         <p className="text-xs font-normal text-base-content">
-          Ask me about Chapter 1 (1).pdf. <span>View Doc</span>
+          Ask me about Chapter 1 (1).pdf
+          <label
+            htmlFor="my-drawer-4"
+            className="ml-2 cursor-pointer font-semibold"
+          >
+            View Doc
+          </label>
         </p>
       </div>
       {/* Drawer component */}

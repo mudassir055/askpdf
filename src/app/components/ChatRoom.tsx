@@ -88,7 +88,7 @@ const ChatRoom = () => {
   };
 
   return (
-    <div className="flex flex-col h-full w-full text-base-content">
+    <div className=" flex flex-col h-full w-full lg:w-1/2 text-base-content">
       {/* Chat messages container */}
       <div className="overflow-y-auto p-4 h-full">
         {/* Response bubbles for incoming Response ... Call the handleMessage() on response from api with message body as pram */}
@@ -137,11 +137,12 @@ const ChatRoom = () => {
               data-count="0 / 2000"
               className=" flex-grow flex flex-col items-end"
             >
-              <textarea
+              <input
                 name="messageBody"
+                autoComplete="off"
                 placeholder="Ask any question about your document"
-                className="border-2 rounded-full px-8 pt-2 h-12 w-full no-scrollbar"
-              ></textarea>
+                className="border-2 rounded-full px-8 h-12 w-full no-scrollbar"
+              />
 
               {/* Character count */}
               <span>

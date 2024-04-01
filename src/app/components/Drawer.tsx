@@ -10,7 +10,7 @@ const Drawer = () => {
   };
 
   return (
-    <div className="drawer drawer-end z-[1]">
+    <div className="drawer drawer-end z-10">
       {/* Checkbox input for toggling the drawer */}
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
       {/* Main content area */}

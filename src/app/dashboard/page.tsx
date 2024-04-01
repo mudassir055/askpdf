@@ -11,15 +11,15 @@ const ChatRoom = dynamic(() => import("../components/ChatRoom"), {
 const Dashboard = () => {
   return (
     // Main container for the dashboard layout
-    <section className="flex w-full h-dvh">
+    <section className="flex w-full h-svh">
       {/* Sidebar component */}
       <Sidebar />
       {/* Container for the main content */}
-      <main className="flex flex-col flex-grow h-full relative">
+      <main className="flex flex-col justify-between items-stretch w-full h-full relative">
         {/* Dashboard header component */}
         <DashboardHeader />
         {/* Main content area, divided into two columns */}
-        <div className="h-[86%] grid grid-cols-1 grid-rows-1 lg:grid-cols-2 w-full relative">
+        <div className="h-[84%] flex w-full relative ">
           {/* Component for rendering PDF content */}
           <PDFRenderer />
           {/* Component for chat room */}
